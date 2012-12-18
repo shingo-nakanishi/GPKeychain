@@ -9,6 +9,7 @@ Core DATA感覚でKeychainを扱えます。
 インストール
 -----
 GPKeychain.hとGPKeychain.mをあなたのプロジェクトに入れる。
+LKKeychainを入れる。
 Security.frameworkを入れる。
 
 GPKeychain.mの
