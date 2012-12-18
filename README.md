@@ -22,7 +22,7 @@ GPKeychainを拡張する。
 ```
 static id gPKeychain = nil;
 
-+(IdKeychain *)sharedManager{
++(yourKeychain *)sharedManager{    // 戻り値を自分が拡張したクラス名に変更
     @synchronized(self) {
         if (gPKeychain == nil) {
             gPKeychain = [[self alloc] init];
