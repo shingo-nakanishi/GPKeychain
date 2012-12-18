@@ -23,6 +23,7 @@
     [[IdKeychain sharedManager] setPiyo:@"PPP"];
     [[IdKeychain sharedManager] setD:@"DDD"];
     [[IdKeychain sharedManager] setFf:@"FFF"];
+    [[IdKeychain sharedManager] setFFFFF:@"FFFFFFF"];
     
     NSLog(@"bar:%@", [IdKeychain sharedManager].bar);
     NSLog(@"piyo:%@", [IdKeychain sharedManager].piyo);

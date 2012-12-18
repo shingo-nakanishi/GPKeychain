@@ -14,5 +14,6 @@
 @dynamic piyo;
 @dynamic d;
 @dynamic ff;
+@dynamic FFFFF;
 
 @end

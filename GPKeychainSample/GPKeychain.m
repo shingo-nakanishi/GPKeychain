@@ -35,7 +35,9 @@ static id gPKeychain = nil;
 //                NSLog(@">>> %@",s);
                 [LKKeychain updatePassword:s account:[propertiesNames objectAtIndex:i] service:SERVICE_KEY];
             };
-            NSString *setSelString = [NSString stringWithFormat:@"set%@:", [((NSString *)[propertiesNames objectAtIndex:i]) capitalizedString] ];
+            
+            NSString *capitalString = [self capitalString:[propertiesNames objectAtIndex:i]];
+            NSString *setSelString = [NSString stringWithFormat:@"set%@:",capitalString];
             SEL setSel = NSSelectorFromString(setSelString);
             IMP setImp = imp_implementationWithBlock(setBlock);
             class_addMethod([GPKeychain class], setSel, setImp, "v@:@");
@@ -83,6 +85,16 @@ static id gPKeychain = nil;
 {
     NSArray* accounts = [LKKeychain getItemsWithService:SERVICE_KEY];
     return accounts;
+}
+
+-(NSString *)capitalString:(NSString *)str{
+    NSString *initial = [[str substringToIndex:1] capitalizedString];
+    NSString *result = [NSString stringWithFormat:@"%@%@", initial, [str substringFromIndex:1]];
+    
+//    NSLog(@"initial:%@", initial);
+//    NSLog(@"result:%@", result);
+    
+    return result;
 }
 
 @end

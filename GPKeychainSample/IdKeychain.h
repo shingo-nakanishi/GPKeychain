@@ -14,5 +14,6 @@
 @property(nonatomic, strong) NSString *piyo;
 @property(nonatomic, strong) NSString *d;
 @property(nonatomic, strong) NSString *ff;
+@property(nonatomic, strong) NSString *FFFFF;
 
 @end
