@@ -5,6 +5,8 @@ GPKeychain
 LKKeychainのラッパーです。
 Core DATA感覚でKeychainを扱えます。
 （まだ十分なテストが行われておりません。ご使用は各自の判断でお願い致します。）
+
+ARCのみ対応です。
  
 インストール
 -----
