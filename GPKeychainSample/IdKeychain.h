@@ -14,4 +14,6 @@
 @property(nonatomic, strong) NSString *piyo;
 @property(nonatomic, strong) NSString *d;
 
++(IdKeychain *)sharedManager;
+
 @end
