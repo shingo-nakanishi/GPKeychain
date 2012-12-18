@@ -13,7 +13,6 @@
 @property(nonatomic, strong) NSString *bar;
 @property(nonatomic, strong) NSString *piyo;
 @property(nonatomic, strong) NSString *d;
-
-+(IdKeychain *)sharedManager;
+@property(nonatomic, strong) NSString *ff;
 
 @end

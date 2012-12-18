@@ -22,10 +22,13 @@
     [[IdKeychain sharedManager] setBar:@"BBB"];
     [[IdKeychain sharedManager] setPiyo:@"PPP"];
     [[IdKeychain sharedManager] setD:@"DDD"];
+    [[IdKeychain sharedManager] setFf:@"FFF"];
     
     NSLog(@"bar:%@", [IdKeychain sharedManager].bar);
     NSLog(@"piyo:%@", [IdKeychain sharedManager].piyo);
     NSLog(@"d:%@", [IdKeychain sharedManager].d);
+    NSLog(@"ff:%@", [IdKeychain sharedManager].ff);
+
 }
 
 - (void)didReceiveMemoryWarning

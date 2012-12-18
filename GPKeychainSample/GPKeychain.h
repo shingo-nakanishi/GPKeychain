@@ -10,7 +10,7 @@
 
 @interface GPKeychain : NSObject
 
-+(id)sharedManager;
++(instancetype)sharedManager;
 -(NSArray *)getAllKey;
 
 @end

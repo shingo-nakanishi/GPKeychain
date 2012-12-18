@@ -55,7 +55,7 @@ static id gPKeychain = nil;
     return self;
 }
 
-+(id)sharedManager{
++(instancetype)sharedManager{
     @synchronized(self) {
         if (gPKeychain == nil) {
             gPKeychain = [[self alloc] init];

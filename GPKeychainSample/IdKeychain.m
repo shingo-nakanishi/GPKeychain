@@ -13,17 +13,6 @@
 @dynamic bar;
 @dynamic piyo;
 @dynamic d;
-
-static id gPKeychain = nil;
-
-+(IdKeychain *)sharedManager{
-    @synchronized(self) {
-        if (gPKeychain == nil) {
-            gPKeychain = [[self alloc] init];
-        }
-    }
-    return gPKeychain;
-}
-
+@dynamic ff;
 
 @end
