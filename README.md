@@ -11,8 +11,15 @@ Core DATA感覚でKeychainを扱えます。
 GPKeychain.hとGPKeychain.mをあなたのプロジェクトに入れる。
 Security.frameworkを入れる。
 
-GPKeychainを拡張する。
+GPKeychain.mの
+```
+#define SERVICE_KEY @"YOUR_SERVICE_KEY"
+```
+をあなたが使うサービス名に変更する。
 
+GPKeychainを拡張する。
+拡張したクラスで以下を追加。
+```
 static id gPKeychain = nil;
 
 +(IdKeychain *)sharedManager{
@@ -23,4 +30,25 @@ static id gPKeychain = nil;
     }
     return gPKeychain;
 }
+```
 
+あとは、ヘッダーに
+```
+@property(nonatomic, strong) NSString *bar;
+@property(nonatomic, strong) NSString *piyo;
+```
+
+ボディーに
+```
+@dynamic bar;
+@dynamic piyo;
+```
+といった感じで、プロパティを追加すれば、
+```
+[[yourKeychain sharedManager] setBar:@"BBB"];
+[[yourKeychain sharedManager] setPiyo:@"PPP"];
+    
+NSLog(@"bar:%@", [yourKeychain sharedManager].bar);
+NSLog(@"piyo:%@", [yourKeychain sharedManager].piyo);
+```
+でキーチェーンにアクセス可能。
