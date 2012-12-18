@@ -17,20 +17,7 @@ GPKeychain.mの
 ```
 をあなたが使うサービス名に変更する。
 
-GPKeychainを拡張する。
-拡張したクラスで以下を追加。
-```
-static id gPKeychain = nil;
-
-+(yourKeychain *)sharedManager{    // 戻り値を自分が拡張したクラス名に変更
-    @synchronized(self) {
-        if (gPKeychain == nil) {
-            gPKeychain = [[self alloc] init];
-        }
-    }
-    return gPKeychain;
-}
-```
+GPKeychainを拡張する（あなたのプロジェクトでひとつだけ作れば十分だと思います）。
 
 あとは、ヘッダーに
 ```
