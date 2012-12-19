@@ -29,6 +29,13 @@
     NSLog(@"piyo:%@", [IdKeychain sharedManager].piyo);
     NSLog(@"d:%@", [IdKeychain sharedManager].d);
     NSLog(@"ff:%@", [IdKeychain sharedManager].ff);
+    
+    [[IdKeychain sharedManager] deleteAllKey];
+    
+    NSLog(@"bar:%@", [IdKeychain sharedManager].bar);
+    NSLog(@"piyo:%@", [IdKeychain sharedManager].piyo);
+    NSLog(@"d:%@", [IdKeychain sharedManager].d);
+    NSLog(@"ff:%@", [IdKeychain sharedManager].ff);
 
 }
 

@@ -12,5 +12,6 @@
 
 +(instancetype)sharedManager;
 -(NSArray *)getAllKey;
+-(void)deleteAllKey;
 
 @end

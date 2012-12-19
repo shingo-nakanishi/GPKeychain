@@ -87,6 +87,20 @@ static id gPKeychain = nil;
     return accounts;
 }
 
+-(void)deleteAllKey{
+    //=======================================================================//
+    // プロパティをNSStringの配列で取得
+    //=======================================================================//
+    NSMutableArray *propertiesNames = [self getProperties:[self class]];
+    
+    //=======================================================================//
+    // delete
+    //=======================================================================//
+    for(int i=0; i<propertiesNames.count; i++){
+        [LKKeychain deletePasswordWithAccount:[propertiesNames objectAtIndex:i] service:SERVICE_KEY];
+    }
+}
+
 -(NSString *)capitalString:(NSString *)str{
     NSString *initial = [[str substringToIndex:1] capitalizedString];
     NSString *result = [NSString stringWithFormat:@"%@%@", initial, [str substringFromIndex:1]];
