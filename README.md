@@ -6,6 +6,7 @@ LKKeychainのラッパーです。
 Core DATA感覚でKeychainを扱えます。
 
 つまり、プロパティを書くだけで、setter, getterが生えて、 プロパティアクセスでKeychainを扱うことができます。
+
 便利になるだけでなく、補完が効き、いままでNSStringで扱っていたものをコンパイラにチェックさせることができます。
 
 ARCのみ対応です。
