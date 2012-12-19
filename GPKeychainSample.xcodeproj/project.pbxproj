@@ -18,7 +18,7 @@
 		652EC879167EEB03004524BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 652EC878167EEB03004524BC /* Default-568h@2x.png */; };
 		652EC87C167EEB03004524BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652EC87B167EEB03004524BC /* ViewController.m */; };
 		652EC87F167EEB03004524BC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652EC87D167EEB03004524BC /* ViewController.xib */; };
-		652EC887167EEB21004524BC /* GPKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 652EC886167EEB21004524BC /* GPKeychain.m */; };
+		6563D10116815D43001A0FEE /* GPKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563D10016815D43001A0FEE /* GPKeychain.m */; };
 		658D3B1D16801B2100716D58 /* IdKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 658D3B1C16801B2100716D58 /* IdKeychain.m */; };
 		65C896F61680343B008C4D40 /* LKKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C896F51680343B008C4D40 /* LKKeychain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		65C896F81680357C008C4D40 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C896F71680357C008C4D40 /* Security.framework */; };
@@ -41,8 +41,8 @@
 		652EC87A167EEB03004524BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		652EC87B167EEB03004524BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		652EC87E167EEB03004524BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		652EC885167EEB21004524BC /* GPKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKeychain.h; sourceTree = "<group>"; };
-		652EC886167EEB21004524BC /* GPKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKeychain.m; sourceTree = "<group>"; };
+		6563D0FF16815D43001A0FEE /* GPKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPKeychain.h; sourceTree = "<group>"; };
+		6563D10016815D43001A0FEE /* GPKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPKeychain.m; sourceTree = "<group>"; };
 		658D3B1B16801B2100716D58 /* IdKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdKeychain.h; sourceTree = "<group>"; };
 		658D3B1C16801B2100716D58 /* IdKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdKeychain.m; sourceTree = "<group>"; };
 		65C896F41680343B008C4D40 /* LKKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKKeychain.h; sourceTree = "<group>"; };
@@ -96,6 +96,7 @@
 		652EC868167EEB03004524BC /* GPKeychainSample */ = {
 			isa = PBXGroup;
 			children = (
+				6563D0FE16815D43001A0FEE /* GPKeychain */,
 				65C896F31680343B008C4D40 /* LKKeychain */,
 				652EC871167EEB03004524BC /* AppDelegate.h */,
 				652EC872167EEB03004524BC /* AppDelegate.m */,
@@ -104,8 +105,6 @@
 				652EC87D167EEB03004524BC /* ViewController.xib */,
 				658D3B1B16801B2100716D58 /* IdKeychain.h */,
 				658D3B1C16801B2100716D58 /* IdKeychain.m */,
-				652EC885167EEB21004524BC /* GPKeychain.h */,
-				652EC886167EEB21004524BC /* GPKeychain.m */,
 				652EC869167EEB03004524BC /* Supporting Files */,
 			);
 			path = GPKeychainSample;
@@ -123,6 +122,15 @@
 				652EC878167EEB03004524BC /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6563D0FE16815D43001A0FEE /* GPKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				6563D0FF16815D43001A0FEE /* GPKeychain.h */,
+				6563D10016815D43001A0FEE /* GPKeychain.m */,
+			);
+			path = GPKeychain;
 			sourceTree = "<group>";
 		};
 		65C896F31680343B008C4D40 /* LKKeychain */ = {
@@ -203,9 +211,9 @@
 				652EC86F167EEB03004524BC /* main.m in Sources */,
 				652EC873167EEB03004524BC /* AppDelegate.m in Sources */,
 				652EC87C167EEB03004524BC /* ViewController.m in Sources */,
-				652EC887167EEB21004524BC /* GPKeychain.m in Sources */,
 				658D3B1D16801B2100716D58 /* IdKeychain.m in Sources */,
 				65C896F61680343B008C4D40 /* LKKeychain.m in Sources */,
+				6563D10116815D43001A0FEE /* GPKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
