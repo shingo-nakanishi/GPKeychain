@@ -38,10 +38,10 @@ GPKeychainを拡張する（あなたのプロジェクトでひとつだけ作�
 ```
 といった感じで、プロパティを追加すれば、
 ```
-[[yourKeychain sharedManager] setBar:@"BBB"];
-[[yourKeychain sharedManager] setPiyo:@"PPP"];
+[[YourKeychain sharedManager] setBar:@"BBB"];
+[[YourKeychain sharedManager] setPiyo:@"PPP"];
     
-NSLog(@"bar:%@", [yourKeychain sharedManager].bar);
-NSLog(@"piyo:%@", [yourKeychain sharedManager].piyo);
+NSLog(@"bar:%@", [YourKeychain sharedManager].bar);
+NSLog(@"piyo:%@", [YourKeychain sharedManager].piyo);
 ```
 でキーチェーンにアクセス可能。
