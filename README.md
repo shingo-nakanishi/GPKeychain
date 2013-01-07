@@ -45,3 +45,7 @@ NSLog(@"bar:%@", [YourKeychain sharedManager].bar);
 NSLog(@"piyo:%@", [YourKeychain sharedManager].piyo);
 ```
 でキーチェーンにアクセス可能。
+```
+[YourKeychain sharedManager].piyo = nil;
+```
+でキーを削除できます。
