@@ -12,7 +12,7 @@
 
 @implementation GPKeychain
 
-#define SERVICE_KEY @"YOUR_SERVICE_KEY"
+#define SERVICE_KEY @"POINTCM"
 static id gPKeychain = nil;
 
 - (id)init
@@ -33,7 +33,11 @@ static id gPKeychain = nil;
             //-----------------------------------------------------//
             void (^setBlock)(id o, NSString *s) = ^(id o, NSString *s){
 //                NSLog(@">>> %@",s);
-                [LKKeychain updatePassword:s account:[propertiesNames objectAtIndex:i] service:SERVICE_KEY];
+                if( s != nil ){
+                    [LKKeychain updatePassword:s account:[propertiesNames objectAtIndex:i] service:SERVICE_KEY];
+                }else if([LKKeychain getPasswordWithAccount:[propertiesNames objectAtIndex:i] service:SERVICE_KEY] != nil){
+                    [LKKeychain deletePasswordWithAccount:[propertiesNames objectAtIndex:i]  service:SERVICE_KEY];
+                }
             };
             
             NSString *capitalString = [self capitalString:[propertiesNames objectAtIndex:i]];
