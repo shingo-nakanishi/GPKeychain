@@ -3,7 +3,7 @@ GPKeychain
 
 ENGLISH
 =========
-This is wrapper of LKKeychain.
+This is wrapper of LKKeychain(https://github.com/lakesoft/LKKeychain).
 You use this like the Core DATA.
 
 This mean, when you write property, automaticaly making setter and getter.
@@ -52,7 +52,7 @@ use nil, you can delete key.
 
 JAPANESE
 =========
-LKKeychainのラッパーです。
+LKKeychain(https://github.com/lakesoft/LKKeychain)のラッパーです。
 Core DATA感覚でKeychainを扱えます。
 
 つまり、プロパティを書くだけで、setter, getterが生えて、 プロパティアクセスでKeychainを扱うことができます。
