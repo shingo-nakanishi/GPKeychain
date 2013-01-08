@@ -1,7 +1,57 @@
 GPKeychain
 ==========
 
+ENGLISH
+=========
+This is wrapper of LKKeychain.
+You use this like the Core DATA.
 
+This mean, when you write property, automaticaly making setter and getter.
+Keychain use NSString for Key, but GPKeychain use setter and getter.
+So, You use complement. Compailer check your keychain code!
+
+install
+-----
+Put GPkeychain.h and GPKeychain.m to your project.
+include LKKeychain(https://github.com/lakesoft/LKKeychain).
+include Security.framework.
+
+Change SERVICE_KEY in GPKeychain.m to your service name.
+```
+#define SERVICE_KEY @"YOUR_SERVICE_KEY"
+```
+
+inheritance GPKeychain.
+in inheritance Class header file
+```
+@property(nonatomic, strong) NSString *bar;
+@property(nonatomic, strong) NSString *piyo;
+```
+
+in inheritance Class body file
+```
+@dynamic bar;
+@dynamic piyo;
+```
+
+that's all. you can use setter and getter.
+```
+[[YourKeychain sharedManager] setBar:@"BBB"];
+[[YourKeychain sharedManager] setPiyo:@"PPP"];
+    
+NSLog(@"bar:%@", [YourKeychain sharedManager].bar);
+NSLog(@"piyo:%@", [YourKeychain sharedManager].piyo);
+```
+
+use nil, you can delete key.
+```
+[YourKeychain sharedManager].piyo = nil;
+```
+
+
+
+JAPANESE
+=========
 LKKeychainのラッパーです。
 Core DATA感覚でKeychainを扱えます。
 
