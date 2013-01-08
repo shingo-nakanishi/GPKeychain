@@ -4,7 +4,8 @@ GPKeychain
 ENGLISH
 =========
 This is wrapper of LKKeychain(https://github.com/lakesoft/LKKeychain).
-You use this like the Core DATA.
+
+when you use this, you can use Keychain like the Core DATA.
 
 This mean, when you write property, automaticaly making setter and getter.
 Keychain use NSString for Key, but GPKeychain use setter and getter.
